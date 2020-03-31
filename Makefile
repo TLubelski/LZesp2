@@ -13,6 +13,7 @@ OBJ_DIR=./obj
 INC_DIR=./inc
 SRC_DIR=./src
 
+
 ###COMPILER###
 CC = g++
 CFLAGS = -Wall -pedantic -std=c++14 -iquote $(INC_DIR)
@@ -32,6 +33,7 @@ $(TARGET): $(OBJ)
 
 .PHONY: clean
 
+
 clean:
-	rm -f ${TRGDIR}/test_arytm_zesp ${OBJ}/*
+	rm -f ${TRGDIR}$(TARGET) ${OBJ_DIR}/*
 

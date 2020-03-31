@@ -4,24 +4,18 @@
 
 using namespace std;
 
-bool BazaInit(const char *sNazwaTestu, fstream & strm_f)
+bool BazaInit(const char *sNazwaTestu, fstream &strm_f)
 {
   string sciezkaPliku = sNazwaTestu;
   sciezkaPliku = "pliki_testow/" + sciezkaPliku + ".dat";
 
-  strm_f.open(sciezkaPliku, ios::out);
+  strm_f.open(sciezkaPliku, ios::in);
 
-  if( strm_f.good() )
+  if (strm_f.good())
     return true;
-  else 
+  else
     return false;
 }
-
-
-
-
-
-
 
 /*
 static WyrazenieZesp  TestLatwy[] =
